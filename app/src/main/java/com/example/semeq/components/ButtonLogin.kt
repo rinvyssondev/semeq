@@ -24,7 +24,7 @@ fun ButtonLogin(
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.4f)
+            .height(100.dp)
             .padding(16.dp),
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(

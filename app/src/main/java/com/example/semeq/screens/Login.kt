@@ -109,17 +109,17 @@ fun Login(navController: NavController, viewModel: SemeqViewModel) {
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 32.dp, bottom = 40.dp),
+                        .padding(top = 32.dp, bottom = 20.dp),
                     textAlign = TextAlign.Center
                 )
-
+                Spacer(modifier = Modifier.height(32.dp))
                 FormLogin(
                     text = stringResource(id = R.string.user),
                     value = username,
                     onValueChange = { username = it }
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(40.dp))
 
                 FormLogin(
                     text = stringResource(id = R.string.password),
@@ -127,13 +127,14 @@ fun Login(navController: NavController, viewModel: SemeqViewModel) {
                     onValueChange = { password = it }
                 )
 
-                Spacer(modifier = Modifier.height(32.dp))
+                Spacer(modifier = Modifier.weight(0.1f))
 
                 ButtonLogin(
                     onClick = {
                         viewModel.getLogin(username, password)
                     }
                 )
+                Spacer(modifier = Modifier.weight(0.1f))
             }
         }
     }
